@@ -36,7 +36,7 @@ if uploaded_file is not None:
     file_extension = uploaded_file.name.split('.')[-1].lower()
     
     st.subheader("📄 File Content")
-    
+     
     try:
         if file_extension in ['txt', 'py', 'html', 'css', 'js', 'md']:
             # Display text-based files
