@@ -1,16 +1,24 @@
 {
-"version": "0.1.0",
-"configurations": [
-    
-    {
-        "name": "debug streamlit",
-        "type": "debugpy",
-        "request": "launch",
-        "program": "./myenv/Scripts/streamlit",
-        "args": [
-            "run",
-            "6_file_upload_demo.py"
-        ]
-    }
-]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Streamlit App",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "args": [
+                "run",
+                "${file}",
+                "--server.port",
+                "8501"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/myenv/Scripts/python.exe",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "justMyCode": false
+        }
+    ]
 }
