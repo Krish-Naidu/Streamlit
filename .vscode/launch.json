@@ -1,0 +1,16 @@
+{
+"version": "0.1.0",
+"configurations": [
+    
+    {
+        "name": "debug streamlit",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "./myenv/Scripts/streamlit",
+        "args": [
+            "run",
+            "6_file_upload_demo.py"
+        ]
+    }
+]
+}
