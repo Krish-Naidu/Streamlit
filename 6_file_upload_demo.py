@@ -105,38 +105,3 @@ else:
     
     for category, types in supported_types.items():
         st.write(f"**{category}:** {types}")
-
-# # Add a download section for demonstration
-# st.subheader("💾 Download Sample Files")
-# st.markdown("You can download these sample files to test the upload functionality:")
-
-# # Create sample content for download
-# sample_txt = "Hello World!\nThis is a sample text file.\nYou can upload this to test the file reader."
-# sample_csv = "Name,Age,City\nJohn,25,New York\nJane,30,London\nBob,35,Paris"
-# sample_json = '{"name": "Sample Data", "version": "1.0", "items": ["apple", "banana", "orange"]}'
-
-# col1, col2, col3 = st.columns(3)
-
-# with col1:
-#     st.download_button(
-#         label="📄 Download Sample TXT",
-#         data=sample_txt,
-#         file_name="sample.txt",
-#         mime="text/plain"
-#     )
-
-# with col2:
-#     st.download_button(
-#         label="📊 Download Sample CSV", 
-#         data=sample_csv,
-#         file_name="sample.csv",
-#         mime="text/csv"
-#     )
-
-# with col3:
-#     st.download_button(
-#         label="🔧 Download Sample JSON",
-#         data=sample_json,
-#         file_name="sample.json",
-#         mime="application/json"
-#     )
