@@ -1,11 +1,17 @@
 # Import required libraries
 import os
+# Import dotenv to load environment variables from .env file
+from dotenv import load_dotenv
+
 try:
     import google.generativeai as genai
     GENAI_AVAILABLE = True
 except ImportError:
     GENAI_AVAILABLE = False
     print("google-generativeai not installed. Run: pip install google-generativeai")
+
+# Load environment variables from .env file
+load_dotenv()
 
 def create_embedding_demo():
     """Demonstrate text embedding using Google's Gemini API"""

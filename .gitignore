@@ -1,0 +1,9 @@
+# API Keys and sensitive information
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config.py
+secrets.toml
+

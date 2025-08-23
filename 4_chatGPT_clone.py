@@ -2,13 +2,21 @@
 import streamlit as st
 import os
 from pydantic_ai import Agent
+# Import dotenv to load environment variables from .env file
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Set up the page configuration
 st.title("ChatGPT Clone with Pydantic AI")
 
-# Set up the Google API key for Gemini model
-# Using the same API key from the demo file
-os.environ['GOOGLE_API_KEY'] = "AIzaSyAT-xzR1hSHM4IG5HUlVRk8wgRYXJFUCR8"
+# Get the Google API key from environment variables
+# Make sure to set GOOGLE_API_KEY in your .env file
+api_key = os.getenv('GOOGLE_API_KEY')
+if not api_key:
+    st.error("GOOGLE_API_KEY not found in environment variables. Please check your .env file.")
+    st.stop()
 
 # Create an AI agent instance with specific configuration
 agent = Agent(  

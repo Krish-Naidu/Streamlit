@@ -3,11 +3,17 @@
 from pydantic_ai import Agent
 # Import os to access environment variables for API key
 import os
+# Import dotenv to load environment variables from .env file
+from dotenv import load_dotenv
 
-# Set up the Google API key for Gemini model
-# You can set this as an environment variable: GOOGLE_API_KEY
-# Or replace "your-google-api-key-here" with your actual API key
-os.environ['GOOGLE_API_KEY'] = "AIzaSyAT-xzR1hSHM4IG5HUlVRk8wgRYXJFUCR8"
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the Google API key from environment variables
+# Make sure to set GOOGLE_API_KEY in your .env file
+api_key = os.getenv('GOOGLE_API_KEY')
+if not api_key:
+    raise ValueError("GOOGLE_API_KEY not found in environment variables. Please check your .env file.")
 
 # Create an AI agent instance with specific configuration
 agent = Agent(  
