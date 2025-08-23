@@ -19,11 +19,6 @@ def create_embedding_demo():
         # Try to get API key from environment variable first
         api_key = os.getenv('GOOGLE_API_KEY')
         
-        # If not found in environment, use the demo key
-        if not api_key:
-            # Replace with your actual API key for production use
-            api_key = "AIzaSyAT-xzR1hSHM4IG5HUlVRk8wgRYXJFUCR8"
-        
         # Configure the API
         genai.configure(api_key=api_key)
         print("✅ API configured successfully")
