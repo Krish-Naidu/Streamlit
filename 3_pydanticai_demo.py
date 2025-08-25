@@ -26,7 +26,18 @@ agent = Agent(
 
 # Run the agent synchronously with a specific question
 # This sends the question to the AI model and waits for a response
-result = agent.run_sync('am i a bot')  
+
+full_prompt = "Am I a bot"
+# full_prompt = f"""
+#                         Context from documents:
+#                         {context}
+                        
+#                         User question: {prompt}
+                        
+#                         Please answer the question based on the context provided. If the context doesn't contain relevant information, say so.
+#                         """
+
+result = agent.run_sync(full_prompt)  
 
 # Print the AI's response/output
 print(result.output)
